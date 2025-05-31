@@ -1,50 +1,51 @@
 // Scenario 1
+const celsius = 25;
+const factor = 9 / 5;
+const fahrenheit = celsius * factor + 32;
 
-celsius = 25;
-factor = 9/5;
-fahrenheit = (celsius * factor) + 32;
-
-console.log(celsius + ' degrees celsius is ' + fahrenheit + ' degrees fahrenheit');
+console.log(
+  celsius + " degrees celsius is " + fahrenheit + " degrees fahrenheit"
+);
 console.log();
 
 // Scenario 2
-ROCK = 'R';
-PAPER = 'P';
-SCISSORS = 'S';
+const ROCK = "R";
+const PAPER = "P";
+const SCISSORS = "S";
 
-player1Score = 0;
-player2Score = 0;
+let player1Score = 0;
+let player2Score = 0;
 
 function rockPaperScissors(player1, player2) {
-	if (player1 == ROCK) {
-		if (player2 == ROCK) {
-			return;
-		} else if (player2 == PAPER) {
-			player2Score += 10;
-		} else if (player2 == SCISSORS) {
-			player1Score += 10;
-		}
-	} else if (player1 == PAPER) {
-		if (player2 == ROCK) {
-			player1Score += 10;
-		} else if (player2 == PAPER) {
-			return;
-		} else if (player2 == SCISSORS) {
-			player2Score += 10;
-		}
-	} else if (player1 == SCISSORS) {
-		if (player2 == ROCK) {
-			player2Score += 10;
-		} else if (player2 == PAPER) {
-			player1Score += 10;
-		} else if (player2 == SCISSORS) {
-			return;
-		}
-	}
+  if (player1 == ROCK) {
+    if (player2 == ROCK) {
+      return;
+    } else if (player2 == PAPER) {
+      player2Score += 10;
+    } else if (player2 == SCISSORS) {
+      player1Score += 10;
+    }
+  } else if (player1 == PAPER) {
+    if (player2 == ROCK) {
+      player1Score += 10;
+    } else if (player2 == PAPER) {
+      return;
+    } else if (player2 == SCISSORS) {
+      player2Score += 10;
+    }
+  } else if (player1 == SCISSORS) {
+    if (player2 == ROCK) {
+      player2Score += 10;
+    } else if (player2 == PAPER) {
+      player1Score += 10;
+    } else if (player2 == SCISSORS) {
+      return;
+    }
+  }
 }
 
-player1 = ROCK;
-player2 = PAPER;
+let player1 = ROCK;
+let player2 = PAPER;
 
 rockPaperScissors(player1, player2);
 
@@ -63,24 +64,24 @@ player2 = SCISSORS;
 
 rockPaperScissors(player1, player2);
 
-console.log('Player 1: ' + player1Score);
-console.log('Player 2: ' + player2Score);
+console.log("Player 1: " + player1Score);
+console.log("Player 2: " + player2Score);
 console.log();
 
 // Scenario 3
-names = [
-	'Santa',
-	'Rudolph',
-	'Dasher',
-	'Dancer',
-	'Prancer',
-	'Vixen',
-	'Comet',
-	'Cupid',
-	'Donner',
-	'Blitzen'
+const names = [
+  "Santa",
+  "Rudolph",
+  "Dasher",
+  "Dancer",
+  "Prancer",
+  "Vixen",
+  "Comet",
+  "Cupid",
+  "Donner",
+  "Blitzen",
 ];
 
-console.log('Workers:');
+console.log("Workers:");
 
 names.forEach((name) => console.log(name));
